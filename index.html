@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drag to reorder items</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">      
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <style>
+        * {
+    font-family: 'Raleway', sans-serif;
+    -webkit-font-smoothing: antialiased;
+         }
+    </style>
+  <script>
+  $( function() {
+      hideSortingHandle()
+    $( ".sortable" ).sortable({ handle: '.handle' });
+  } );
+
+  function showSortingHandle(){
+      var sortingHandleObject = document.getElementsByClassName('handle')
+      for (let i=0; i<sortingHandleObject.length; i++){
+          sortingHandleObject[i].style.display = 'block'
+      } 
+  }
+
+  function hideSortingHandle(){
+      var sortingHandleObject = document.getElementsByClassName('handle')
+      for (let i=0; i<sortingHandleObject.length; i++){
+          sortingHandleObject[i].style.display = 'none'
+      }    
+  }
+  </script>
+
+</head>
+<body class='bg-near-white'>
+
+    <div class='flex justify-center mb5'>
+        <div style='width: 1000px'>
+            <div style='position: sticky; top: 0px;'>
+                <div class='mt4 ml4'>
+                    <button class='pointer' onClick='showSortingHandle()'>Show sorting handle</button>
+                </div>
+                <div class='mt2 ml4'>
+                    <button class='pointer' onClick='hideSortingHandle()'>hide sorting handle</button>
+                </div>
+            </div>
+
+            
+                
+                <div class='flex flex-row mt4'>
+                    <div class='flex flex-column'>
+                        <div class='gray f6'>
+                            Stimulus
+                        </div>
+                        <div contentEditable='true' class='bg-white shadow-1 ba b--dashed pa3'>
+                            The man turned to Paul with the friendliest of smiles and said, "My boy's just turned eighteen, Doctor."
+                            <br><br>
+                            "That's nice."
+                            <br><br>
+                            "He's got his whole life ahead of him. Wonderful age, eighteen." He paused, as though his remark demanded a response.
+                            <br><br>
+                            "I'd like to be eighteen again," said Paul lamely.
+                            <br><br>
+                            "He's a good boy, Doctor. He isn't what you'd call real bright. Like his old man -- his heart's in the right place, and he wants to do the most he can with what he's got." Again the waitful pause.
+                            <br><br>
+                            "That's all any of us can do," said Paul.
+                            <br><br>
+                            "Well, as long as such a smart man as you is here, maybe I could get you to give me some advice for the boy. He just finished his National General Classification TestsHe didn't do nearly well enough for college. There were only twenty-seven openings, and six hundred kids trying for them. I can't afford to send him to a private school, so now he's got to decide what he's going to do with his life, Doctor: what's it going to be, the Army or the Reeks and Wrecks?"
+                           "I suppose there's a lot to be said for both," said Paul uncomfortably. "I really don't know much about either one.  "Doctor," said the man, desperately now, "isn't there something the boy could do at the Works? He's awfully clever with his hands. Isn't there someplace in the plant--?"
+                           <br><br>
+                            "He's got to have a graduate degree," said Paul. He reddened. "That's policy, and I didn't make it. Sometimes we get Reconstruction and Reclamation people over to help put in big machines or do a heavy repair job, but not very often. Maybe he could open a repair shop."
+                            <br><br>
+                            The man exhaled."Repair shop. How many repair shops you think the city  can support, eh? I was going to open one when I got laid off. So was Joe, so was Sam, so was Alf. We're all clever with our hands, so we'll all open repair shops. 
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+
+                <div class="sortable mt2">
+                
+                <!-- item -->
+                <div class='flex flex-row mt4'>
+                    <div class="handle pointer f3">&#9769;</div>
+                    <div class='flex flex-column'>
+                        <div class='gray f6'>
+                            MCQ 1234
+                        </div>
+                        <div contentEditable='true' class='bg-white shadow-1 ba b--dashed pa3'>
+                            The man’s comment in line 4 is most likely delivered with
+                            <br><br>
+                            <b>A</b>&nbsp;&nbsp;fervour. <br>
+                            <b>B</b>&nbsp;&nbsp;hesitancy. <br>
+                            <b>C</b>&nbsp;&nbsp;bitterness.<br>
+                            <b>D</b>&nbsp;&nbsp;smugness.<br>
+                        </div>
+
+                        <div class='gray f6 mt2'>
+                            Metadata 1234
+                        </div>
+                        <div class='bg-white shadow-1 ba b--dashed pa3'>
+                            <div class='flex flex-row'>
+                                <div class='b w4'>
+                                    Item
+                                </div>
+                                <div>
+                                    Multiple coice
+                                </div>
+                            </div>
+                            <div class='flex flex-row'>
+                                <div class='b w4'>
+                                    Strand
+                                </div>
+                                <div>
+                                    interpersonal understanding
+                                </div>
+                            </div>
+                            <div class='flex flex-row'>
+                                <div class='b w4'>
+                                    Strand code
+                                </div>
+                                <div>
+                                    understand that interpersonal exchanges are regulated by verbal and nonverbal cues.
+                                </div>
+                            </div>
+                            <div class='flex flex-row'>
+                                <div class='b w4'>
+                                    Key
+                                </div>
+                                <div>
+                                    A
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end item -->
+  <!-- item -->
+  <div class='flex flex-row mt4'>
+    <div class="handle pointer f3">&#9769;</div>
+    <div class='flex flex-column'>
+        <div class='gray f6'>
+            MCQ 5678
+        </div>
+        <div contentEditable='true' class='bg-white shadow-1 ba b--dashed pa3'>
+            ‘[The man] paused, as though his remark demanded a response’ (lines 3 and 4).<br><br>
+            What kind of response is the man most likely seeking from Paul?<br><br> 
+            
+            <b>A</b>&nbsp;&nbsp;a spirited agreement <br>
+            <b>B</b>&nbsp;&nbsp;a personal anecdote <br>
+            <b>C</b>&nbsp;&nbsp;a change of subject<br>
+            <b>D</b>&nbsp;&nbsp;a contrary opinion<br>
+        </div>
+
+        <div class='gray f6 mt2'>
+            Metadata 5678
+        </div>
+        <div class='bg-white shadow-1 ba b--dashed pa3'>
+            <div class='flex flex-row'>
+                <div class='b w4'>
+                    Item
+                </div>
+                <div>
+                    Multiple coice
+                </div>
+            </div>
+            <div class='flex flex-row'>
+                <div class='b w4'>
+                    Strand
+                </div>
+                <div>
+                    interpersonal understanding
+                </div>
+            </div>
+            <div class='flex flex-row'>
+                <div class='b w4'>
+                    Strand code
+                </div>
+                <div>
+                    understand that interpersonal exchanges are influenced by peoples’ motives.
+                </div>
+            </div>
+            <div class='flex flex-row'>
+                <div class='b w4'>
+                    Key
+                </div>
+                <div>
+                    A
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end item -->
+
+  <!-- item -->
+  <div class='flex flex-row mt4'>
+    <div class="handle pointer f3">&#9769;</div>
+    <div class='flex flex-column'>
+        <div class='gray f6'>
+            MCQ 9101112
+        </div>
+        <div contentEditable='true' class='bg-white shadow-1 ba b--dashed pa3'>
+            Paul’s comment in line 6 is best described as an attempt to<br><br>
+            
+            <b>A</b>&nbsp;&nbsp;maintain civility.<br>
+            <b>B</b>&nbsp;&nbsp;express his feelings. <br>
+            <b>C</b>&nbsp;&nbsp;demonstrate sympathy.<br>
+            <b>D</b>&nbsp;&nbsp;redirect the conversation.<br>
+        </div>
+
+        <div class='gray f6 mt2'>
+            Metadata 9101112
+        </div>
+        <div class='bg-white shadow-1 ba b--dashed pa3'>
+            <div class='flex flex-row'>
+                <div class='b w4'>
+                    Item
+                </div>
+                <div>
+                    Multiple coice
+                </div>
+            </div>
+            <div class='flex flex-row'>
+                <div class='b w4'>
+                    Strand
+                </div>
+                <div>
+                    interpersonal understanding
+                </div>
+            </div>
+            <div class='flex flex-row'>
+                <div class='b w4'>
+                    Strand code
+                </div>
+                <div>
+                    understand that interpersonal exchanges are influenced by peoples’ motives.
+                </div>
+            </div>
+            <div class='flex flex-row'>
+                <div class='b w4'>
+                    Key
+                </div>
+                <div>
+                    D
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end item -->
+
+
+            </div> 
+        </div>
+    </div>
+    
+        
+ 
+ 
+</body>
+</html>
